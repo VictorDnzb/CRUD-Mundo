@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <div class="header">
         <h1>Projeto Mundo</h1>
     </div>
-    
+    <div class="main">
+        <h2>Sobre o projeto mundo:</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat.</p>
+    </div>
+    <div class="left">
+        <p>Cadastro de países:
+        <div class="form-container">
+            <div class="form-group">
+                <form method="post">
+                    <label for="pais">Nome do país:</label><br>
+                    <input type="text" id="pais" name="pais"><br>
+                    <label for="lname">População do país:</label><br>
+                    <input type="number" id="populacao" name="populacao"><br>
+                    <label for="imagem">Inserir imagem do país:</label><br>
+                    <input class="imagem" type="file" id="imagem" name="imagem"><br><br>
+                    <input class="button" type="submit" value="Limpar dados"> <br>
+                    <input class="button" type="reset" value="Limpar dados">
+                   
+                </form>
+            </div>
+        </div>
+        </p>
+    </div>
+    <footer>
+        <p>Projeto mundo, 2025</p>
+    </footer>
+
 </body>
+
 </html>
