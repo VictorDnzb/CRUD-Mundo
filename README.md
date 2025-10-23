@@ -1,7 +1,3 @@
-Claro! Aqui está um modelo de **README.md** completo e profissional para seu projeto **CRUD Mundo**, pronto para ser usado no GitHub:
-
----
-
 # 🌍 CRUD Mundo - Sistema de Gerenmento de Países e Cidades
 
 Este projeto é uma aplicação web completa para gerenciamento de dados geográficos, permitindo o cadastro, consulta, edição e exclusão de países e cidades. Desenvolvido como parte de uma atividade avaliativa da disciplina de **Programação Web**.
