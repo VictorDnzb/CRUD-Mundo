@@ -1,4 +1,4 @@
-# 🌍 CRUD Mundo - Sistema de Gerenmento de Países e Cidades
+# 🌍 CRUD Mundo - Sistema de Gerenciamento de Países e Cidades
 
 Este projeto é uma aplicação web completa para gerenciamento de dados geográficos, permitindo o cadastro, consulta, edição e exclusão de países e cidades. Desenvolvido como parte de uma atividade avaliativa da disciplina de **Programação Web**.
 
