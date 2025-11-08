@@ -1,14 +1,14 @@
-# 🌍 Lust - Sistema de Gerenciamento de Países e Cidades
+#  Lust - Sistema de Gerenciamento de Países e Cidades
 
-## 📋 Descrição do Projeto
+##  Descrição do Projeto
 
 O **Lust** é uma aplicação web completa desenvolvida para gerenciar dados geográficos de países e cidades ao redor do mundo. O sistema implementa operações CRUD (Create, Read, Update, Delete) com uma interface intuitiva e responsiva, permitindo o cadastro, consulta, edição e exclusão de informações geográficas.
 
-## 🎯 Objetivo
+##  Objetivo
 
 Criar uma plataforma que facilite o gerenciamento de dados geográficos, integrando front-end moderno com back-end robusto e banco de dados relacional, enriquecido com informações de APIs externas.
 
-## 🛠 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ### Front-End
 - **HTML5** - Estrutura semântica da aplicação
@@ -19,7 +19,7 @@ Criar uma plataforma que facilite o gerenciamento de dados geográficos, integra
 - **PHP** - Lógica de negócio e comunicação com o banco
 - **MySQL** - Armazenamento e gerenciamento de dados
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 CrudMundo/
@@ -40,7 +40,7 @@ CrudMundo/
 └── README.md                  # Documentação do projeto
 ```
 
-## 🗃 Estrutura do Banco de Dados
+## Estrutura do Banco de Dados
 
 ### Tabela: países
 - `id_pais` (PK) - Identificador único do país
@@ -57,19 +57,19 @@ CrudMundo/
 
 ## ⚙️ Funcionalidades
 
-### ✅ Gerenciamento de Países
+###  Gerenciamento de Países
 - Cadastro de novos países
 - Listagem completa de países
 - Edição de informações existentes
 - Exclusão com verificação de integridade referencial
 
-### 🏙 Gerenciamento de Cidades
+###  Gerenciamento de Cidades
 - Cadastro de cidades associadas a países
 - Listagem de cidades por país
 - Edição de dados das cidades
 - Exclusão controlada
 
-## 🚀 Como abrir o projeto
+##  Como abrir o projeto
 
 ### Pré-requisitos
 - Servidor web (Apache, Nginx)
@@ -96,7 +96,7 @@ CrudMundo/
 - Total de cidades cadastradas por continente
 
 
-## 👨‍💻 Desenvolvedor
+##  Desenvolvedor
 
 **Victor Diniz**  
 *Estudante de Desenvolvimento de sistemas*  
