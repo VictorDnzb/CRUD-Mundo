@@ -1,156 +1,105 @@
-# 🌍 CRUD Mundo - Sistema de Gerenciamento de Países e Cidades
-
-Este projeto é uma aplicação web completa para gerenciamento de dados geográficos, permitindo o cadastro, consulta, edição e exclusão de países e cidades. Desenvolvido como parte de uma atividade avaliativa da disciplina de **Programação Web**.
-
----
+# 🌍 Lust - Sistema de Gerenciamento de Países e Cidades
 
 ## 📋 Descrição do Projeto
 
-O **CRUD Mundo** é um sistema que permite:
+O **Lust** é uma aplicação web completa desenvolvida para gerenciar dados geográficos de países e cidades ao redor do mundo. O sistema implementa operações CRUD (Create, Read, Update, Delete) com uma interface intuitiva e responsiva, permitindo o cadastro, consulta, edição e exclusão de informações geográficas.
 
-- Cadastrar, listar, editar e excluir **países** e **cidades**.
-- Manter a integridade referencial entre as entidades.
-- Consultar informações climáticas em tempo real e dados complementares de países via APIs externas.
-- Interface responsiva e validações no front-end e back-end.
+## 🎯 Objetivo
 
----
+Criar uma plataforma que facilite o gerenciamento de dados geográficos, integrando front-end moderno com back-end robusto e banco de dados relacional, enriquecido com informações de APIs externas.
 
 ## 🛠 Tecnologias Utilizadas
 
-### Front-End:
-- **HTML5** (estrutura semântica)
-- **CSS3** (estilização e responsividade)
-- **JavaScript** (validações e interações)
+### Front-End
+- **HTML5** - Estrutura semântica da aplicação
+- **CSS3** - Estilização e design responsivo
+- **JavaScript** - Interatividade e validações
 
-### Back-End:
-- **PHP** (lógica de negócio e integração com BD)
-- **MySQL** (banco de dados)
+### Back-End
+- **PHP** - Lógica de negócio e comunicação com o banco
+- **MySQL** - Armazenamento e gerenciamento de dados
 
-### APIs Consumidas:
-- [REST Countries](https://restcountries.com/) – Dados complementares de países
-- [OpenWeatherMap](https://openweathermap.org/) – Informações climáticas de cidades
-
-### Controle de Versão:
-- **Git** e **GitHub**
-
----
-
-## 🗂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
-crud-mundo/
+CrudMundo/
 │
-├── frontend/
-│   ├── index.html
-│   ├── pais.html
-│   ├── cidade.html
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── assets/
-│       └── (imagens, ícones)
+├── css/
+│   └── style.css              # Estilos principais da aplicação
 │
-├── backend/
-│   ├── conexao.php
-│   ├── pais/
-│   │   ├── criar.php
-│   │   ├── listar.php
-│   │   ├── editar.php
-│   │   └── excluir.php
-│   └── cidade/
-│       ├── criar.php
-│       ├── listar.php
-│       ├── editar.php
-│       └── excluir.php
+├── js/
+│   └── app.js                 # JavaScript para interações e validações
 │
-├── database/
-│   └── bd_mundo.sql
+├── php/
+│   ├── db.php                 # Conexão com o banco de dados
+│   ├── paises.php             # Operações CRUD para países
+│   └── cidades.php            # Operações CRUD para cidades
 │
-└── README.md
+├── bd_mundo.sql               # Script de criação do banco de dados
+├── index.html                 # Página principal da aplicação
+└── README.md                  # Documentação do projeto
 ```
 
----
+## 🗃 Estrutura do Banco de Dados
 
-## 🗃 Banco de Dados
+### Tabela: países
+- `id_pais` (PK) - Identificador único do país
+- `nome` - Nome oficial do país
+- `continente` - Continente onde está localizado
+- `populacao` - População total do país
+- `idioma` - Idioma principal
 
-### Tabelas:
+### Tabela: cidades
+- `id_cidade` (PK) - Identificador único da cidade
+- `nome` - Nome da cidade
+- `populacao` - População da cidade
+- `id_pais` (FK) - Referência ao país
 
-#### `paises`
-| Campo        | Tipo         | Descrição               |
-|--------------|--------------|-------------------------|
-| id_pais      | INT (PK)     | Identificador único     |
-| nome         | VARCHAR(100) | Nome oficial do país    |
-| continente   | VARCHAR(50)  | Continente              |
-| populacao    | INT          | População total         |
-| idioma       | VARCHAR(50)  | Idioma principal        |
+## ⚙️ Funcionalidades
 
-#### `cidades`
-| Campo        | Tipo         | Descrição               |
-|--------------|--------------|-------------------------|
-| id_cidade    | INT (PK)     | Identificador único     |
-| nome         | VARCHAR(100) | Nome da cidade          |
-| populacao    | INT          | População da cidade     |
-| id_pais      | INT (FK)     | Referência ao país      |
+### ✅ Gerenciamento de Países
+- Cadastro de novos países
+- Listagem completa de países
+- Edição de informações existentes
+- Exclusão com verificação de integridade referencial
 
----
+### 🏙 Gerenciamento de Cidades
+- Cadastro de cidades associadas a países
+- Listagem de cidades por país
+- Edição de dados das cidades
+- Exclusão controlada
 
-## ⚙️ Como Executar o Projeto
+## 🚀 Como abrir o projeto
 
-### Pré-requisitos:
-- Servidor web (ex: XAMPP, WAMP)
-- PHP 7.4+
-- MySQL 5.7+
+### Pré-requisitos
+- Servidor web (Apache, Nginx)
+- PHP 7.4 ou superior
+- MySQL 5.7 ou superior
+- Navegador web moderno
 
-### Passos:
+### Instalação
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/crud-mundo.git
+   git clone https://github.com/VictorDnzb/CRUD-Mundo.git
    ```
 
 2. **Configure o banco de dados:**
-   - Importe o arquivo `database/bd_mundo.sql` no phpMyAdmin ou via linha de comando.
+   - Execute o script `bd_mundo.sql` no MySQL
+   - Configure as credenciais no arquivo `php/db.php`
 
-3. **Configure a conexão com o BD:**
-   - Edite o arquivo `backend/conexao.php` com suas credenciais do MySQL.
+3. **Acesse a aplicação:**
+   - Abra o navegador e acesse `http://localhost/Crud-Mundo`
 
-4. **Coloque os arquivos na pasta do servidor:**
-   - Ex: `C:\xampp\htdocs\crud-mundo`
+### 📈 Estatísticas
 
-5. **Acesse no navegador:**
-   ```
-   http://localhost/crud-mundo/frontend/index.html
-   ```
+- Total de cidades cadastradas por continente
 
----
 
-## 📌 Funcionalidades
+## 👨‍💻 Desenvolvedor
 
-### Principais:
-- ✅ Cadastro de países e cidades
-- ✅ Listagem com busca dinâmica
-- ✅ Edição e exclusão com confirmação
-- ✅ Validação de formulários no front-end e back-end
-- ✅ Integração com APIs externas
-
-### Extras (Opcionais):
-- 🔍 Busca dinâmica por nome
-- 📊 Estatísticas (ex: cidade mais populosa)
-- 🌤 Clima em tempo real por cidade
-
----
-
-## 👨‍💻 Autor
-
-**Victor Diniz Bento**  
-📧 Email: vcr.dnz@gmail.com
-🔗 GitHub: [VictorDnzb](https://github.com/VictorDnzb)
-
----
-
-## 📄 Licença
-
-Este projeto é destinado para fins educacionais.
+**Victor Diniz**  
+*Estudante de Desenvolvimento de sistemas*  
+[vcr.dnz@gmail.com] | [https://www.linkedin.com/in/victor-diniz-bento-674026314/]
 
 ---
