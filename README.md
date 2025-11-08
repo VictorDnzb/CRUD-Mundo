@@ -55,7 +55,7 @@ CrudMundo/
 - `populacao` - População da cidade
 - `id_pais` (FK) - Referência ao país
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
 
 ###  Gerenciamento de Países
 - Cadastro de novos países
@@ -91,7 +91,7 @@ CrudMundo/
 3. **Acesse a aplicação:**
    - Abra o navegador e acesse `http://localhost/Crud-Mundo`
 
-### 📈 Estatísticas
+###  Estatísticas
 
 - Total de cidades cadastradas por continente
 
