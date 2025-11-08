@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoManager</title>
+
+    <!-- linkando o css externo -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- menu de navegação -->
+    <header class="menu">
+        <h1 class="logo">🌍 GeoManager</h1>
+
+        <nav class="nav-links">
+            <!-- botões que trocam as páginas via javascript -->
+            <button class="btn-menu" onclick="mostrarPagina('home')">Home</button>
+            <button class="btn-menu" onclick="mostrarPagina('paises')">Países</button>
+            <button class="btn-menu" onclick="mostrarPagina('cidades')">Cidades</button>
+        </nav>
+    </header>
+
+
+    <!-- PÁGINA HOME -->
+    <section id="home" class="pagina ativa">
+        <h2 class="titulo-principal">Bem-vindo ao GeoManager</h2>
+        <p class="texto-descritivo">
+            Sistema simples para cadastrar e gerenciar países e cidades.
+        </p>
+    </section>
+
+
+    <!-- PÁGINA PAÍSES -->
+    <section id="paises" class="pagina">
+
+        <h2 class="titulo-principal">Gerenciar Países</h2>
+
+        <!-- formulário de países -->
+        <form id="formPais" class="formulario" onsubmit="salvarPais(event)">
+            <input type="hidden" id="idPais">
+
+            <label>Nome do país *</label>
+            <input type="text" id="nomePais" required>
+
+            <label>Continente *</label>
+            <select id="continentePais" required>
+                <option value="">Selecione</option>
+                <option value="África">África</option>
+                <option value="América">América</option>
+                <option value="Ásia">Ásia</option>
+                <option value="Europa">Europa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+
+            <label>População *</label>
+            <input type="number" id="populacaoPais" min="1" required>
+
+            <label>Idioma *</label>
+            <input type="text" id="idiomaPais" required>
+
+            <div class="acoes-form">
+                <button type="submit" id="botaoSalvarPais" class="btn-primario">Salvar</button>
+                <button type="button" id="botaoCancelarPais" class="btn-secundario oculto" onclick="cancelarEdicaoPais()">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+
+        <!-- tabela de países -->
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Continente</th>
+                    <th>População</th>
+                    <th>Idioma</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaPaises"></tbody>
+        </table>
+
+    </section>
+
+
+
+    <!-- PÁGINA CIDADES -->
+    <section id="cidades" class="pagina">
+
+        <h2 class="titulo-principal">Gerenciar Cidades</h2>
+
+        <!-- formulário de cidades -->
+        <form id="formCidade" class="formulario" onsubmit="salvarCidade(event)">
+            <input type="hidden" id="idCidade">
+
+            <label>Nome *</label>
+            <input type="text" id="nomeCidade" required>
+
+            <label>População *</label>
+            <input type="number" id="populacaoCidade" min="1" required>
+
+            <label>País *</label>
+            <select id="paisCidade" required></select>
+
+            <div class="acoes-form">
+                <button type="submit" id="botaoSalvarCidade" class="btn-primario">Salvar</button>
+                <button type="button" id="botaoCancelarCidade" class="btn-secundario oculto" onclick="cancelarEdicaoCidade()">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+
+        <!-- tabela de cidades -->
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Cidade</th>
+                    <th>População</th>
+                    <th>País</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaCidades"></tbody>
+        </table>
+
+    </section>
+
+
+    <!-- rodapé -->
+    <footer class="rodape">
+        <p>GeoManager © 2024 — desenvolvido para estudos</p>
+    </footer>
+
+
+    <!-- script javascript externo -->
+    <script src="js/app.js"></script>
+</body>
+</html>
