@@ -1,0 +1,148 @@
+/* reset básico para remover margens e evitar inconsistências */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo geral do corpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f3f5;
+    color: #333;
+}
+
+/* cabeçalho / menu */
+.menu {
+    background-color: #004aad;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* botões do menu */
+.nav-links .btn-menu {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-menu:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 6px;
+}
+
+/* seções */
+.pagina {
+    display: none;
+    padding: 30px;
+}
+
+.ativa {
+    display: block;
+}
+
+/* formulário */
+.formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.formulario label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* botões */
+.acoes-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primario {
+    padding: 10px 20px;
+    border: none;
+    background-color: #008037;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primario:hover {
+    background-color: #00652c;
+}
+
+.btn-secundario {
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secundario:hover {
+    background-color: #333;
+}
+
+/* oculto (utilizado para cancelar edição) */
+.oculto {
+    display: none;
+}
+
+/* tabela */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.tabela th {
+    background-color: #004aad;
+    color: white;
+    padding: 10px;
+}
+
+.tabela td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela tr:hover td {
+    background-color: #f0f8ff;
+}
+
+/* rodapé */
+.rodape {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #004aad;
+    color: white;
+}
