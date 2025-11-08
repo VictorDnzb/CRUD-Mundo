@@ -1,7 +1,3 @@
-/* ===========================
-   sistema SPA - troca de telas
-   =========================== */
-
 function mostrarPagina(idPagina) {
     // pega todas as seções (home, países e cidades)
     document.querySelectorAll(".pagina").forEach(secao => {
@@ -15,9 +11,7 @@ function mostrarPagina(idPagina) {
 }
 
 
-/* ===========================
-   armazenamento no localStorage
-   =========================== */
+/*  armazenamento no localStorage */
 
 let paises = JSON.parse(localStorage.getItem("paises")) || [];
 let cidades = JSON.parse(localStorage.getItem("cidades")) || [];
@@ -29,9 +23,7 @@ function salvarLocal() {
 }
 
 
-/* ===========================
-   CRUD DE PAÍSES
-   =========================== */
+/*CRUD DE PAÍSES  */
 
 function salvarPais(event) {
     event.preventDefault(); // impede recarregar página
@@ -104,9 +96,7 @@ function excluirPais(id) {
 }
 
 
-/* ===========================
-   CRUD DE CIDADES
-   =========================== */
+/* CRUD DE CIDADES */
 
 function salvarCidade(event) {
     event.preventDefault();
@@ -163,9 +153,7 @@ function excluirCidade(id) {
 }
 
 
-/* ===========================
-   ATUALIZAR TABELAS
-   =========================== */
+/*ATUALIZAR TABELA */
 
 function atualizarTabelas() {
     atualizarTabelaPaises();
